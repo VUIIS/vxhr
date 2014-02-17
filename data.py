@@ -13,13 +13,6 @@ import os
 import pandas as pd
 from redcap import Project
 
-try:
-    RCURL = os.environ['VXHR_RCURL']
-    RCAPI = os.environ['VXHR_RCTOKEN']
-except KeyError as e:
-    print("You must set %s" % str(e))
-    raise
-
 def get_raw():
     """Top-level function.Use to get a DataFrame from the redcap project
 
@@ -34,6 +27,7 @@ def combine_project_pi(record):
 
 
 def csv_from_redcap():
+    RCURL, RCAPI = os.environ['VXHR_RCURL'], os.environ['VXHR_RCTOKEN']
     p = Project(RCURL, RCAPI)
     return p.export_records(format='csv')
 

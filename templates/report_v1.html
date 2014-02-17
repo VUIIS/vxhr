@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<p class="centered">
+  <strong>This data reflects how often a task was sent to the ACCRE cluster, not how many jobs successfully completed.</strong>
+</p>
+
+{% for name, table in reports %}
+<h3 class="report-title centered">{{ name }}</h3>
+{{ table }}
+{% endfor %}
+
+{% endblock %}

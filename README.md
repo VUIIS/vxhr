@@ -23,6 +23,7 @@ Required & helpful environment variables vxhr will honor:
 * `VXHR_RCTOKEN`: API Token to your project
 * `VXHR_PORT`: port to launch web app, optional, defaults to 9000
 * `VXHR_HOST`: host to launch web app, optional, defaults to 127.0.0.1
+* `VXHR_INDEX`: url to put index on, defaults to '/'
 
 ### Running
 
